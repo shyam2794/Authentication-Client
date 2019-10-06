@@ -6,26 +6,14 @@ import axios from "axios";
 
 // import  SignUpModal from "./SignUpModal";
 
-// const url = "https://nameless-harbor-36131.herokuapp.com";
-
-const localUrl = 'http://localhost:4000';
+const url = "https://nameless-harbor-36131.herokuapp.com";
 
 class LoginForm extends Component {
   // heroku url 
 
-  // onFormSubmit = async values => {
-  //   try {
-  //     const response = await axios.get(`${url}/login`);
-  //     console.log(response);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // localhost 
   onFormSubmit = async values => {
     try {
-      const response = await axios.post(`${localUrl}/login`,values);
+      const response = await axios.post(`${url}/login`,values);
       console.log(response);
     } catch (error) {
       console.log(error);
